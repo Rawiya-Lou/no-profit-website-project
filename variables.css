@@ -1,0 +1,38 @@
+:root{
+    --logo-color:#60457C;
+    --primary: #64576F;
+    --secondary:#DBBBFC;
+    --bg-primary:#DBBBFC;
+    --bg-secondry:#64576F;
+    --gradient: linear-gradient(90deg, rgba(96,69,124,1) 0%, rgba(96,69,124,1) 33%, rgba(219,187,252,1) 82%);
+    --black:#3C3640;
+    --black-75: #595757;
+    --black-5:#F5F5F5;
+    --card: rgb(179,170,184);
+    --card-gradient: linear-gradient(90deg, rgba(179,170,184,1) 32%, rgba(219,187,252,1) 64%);
+
+}
+
+.btn{
+    border: 2px solid var(--black-5);
+    border-radius: 20px;
+    padding:0.4em 1em;
+    text-align: center;
+    width:100px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: all 0.2s;
+    color:var(--black-75);
+    border-color: var(--black-75);
+}
+
+.btn:hover{
+    color:var(--black-5);
+    border-color: var(--black-75);
+    background-color: var(--black-75);
+}  
+
+.btn:active{
+    background-color: var(--logo-color);
+    border-color: var(--logo-color);
+} 

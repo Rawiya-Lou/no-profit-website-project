@@ -1,0 +1,107 @@
+/* resources-section */
+
+.resources{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+.resources__header{
+    color:var(--black-75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 2.5rem;
+    text-shadow: 0px 2px 3px rgb(167, 166, 166);
+    font-weight: bold;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.resources__card-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    position: relative;
+    background:linear-gradient(90deg, rgba(179,170,184,1) 32%, rgba(219,187,252,1) 64%);
+    box-shadow: 0px 10px 9px var(--black-75);
+    padding-bottom: 2em;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.card-img{
+    width: 100%;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    object-fit: cover;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    opacity: 0.5;
+}
+
+.card-text h3{
+    font-size: 2.08rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:var(--blakc-5);
+    font-weight: bold;
+    padding-top: 1em;
+    text-align: center;
+ 
+}
+
+.card-text p{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blakc-5);
+    padding: 1.2em 0.5em;
+    text-align: center;
+}
+.card-btn{
+    color:var(--black-75);
+    border-color: var(--black-75);
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.card-btn:hover{
+    color:var(--black-5);
+    border-color: var(--black-75);
+    background-color: var(--black-75);
+}  
+
+.card-btn:active{
+    background-color: var(--logo-color);
+    border-color: var(--logo-color);
+} 
+
+.resources__btn{
+    color:var(--logo-color);
+    font-weight: 900;
+    border-color: var(--logo-color);
+    border-color: var(--logo-color);
+    transition: all 0.2s;
+}
+
+.resources__btn:hover, .resources__btn:active{
+    color:var(--black-5);
+    font-weight: 900;
+    background-color: var(--logo-color);
+    border-color: var(--logo-color);
+}

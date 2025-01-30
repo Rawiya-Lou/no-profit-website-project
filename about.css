@@ -1,0 +1,270 @@
+/* hero-section */
+.hero{
+    display: flex;
+    flex-flow: column nowrap;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+    background-color: var(--bg-secondry);
+    color:var(--black-5);
+    text-align: center;
+    
+}
+
+.hero__header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 3rem;
+    text-shadow: 0px 3px 2px var(--black-75);
+    font-weight: bold;
+}
+
+.hero__description{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  max-width: 65ch;
+}
+
+.hero__btn{
+    color: #fff;
+    border-color:#fff;
+    }
+    
+.hero__btn:hover{
+    color:var(--logo-color);
+    background-color:#fff;
+ }
+ /* achievement-section */
+
+ .achievements__header,
+.team__header,
+.stories__header{
+    color:var(--black-75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 3rem;
+    text-shadow: 0px 2px 3px rgb(167, 166, 166);
+    font-weight: bold;
+}
+.achievements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 64px;
+    margin-top: 128px;
+    margin-bottom: 64px;
+}
+
+.achievements__list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.list-img{
+    border-radius: 16px;
+    object-fit: cover;
+    width: 240px;
+    height:240px;
+
+}
+
+.list-opacity{
+    position: relative;
+}
+
+.list-text:hover{
+    box-shadow: 0 5px 20px var(--black-75);
+
+}
+.list-text{
+    box-shadow: 0 3px 10px var(--black-75);
+   transition: box-shadow 0.2s;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    min-width: 240px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(179,170,184, 0.6);
+    border-radius: 16px;
+    max-inline-size: 100%;
+    max-block-size: 100%;
+   
+}
+
+.list-text h3{
+    transform: translatey(0px);
+    font-size: 2.08rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px var(--black-75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: transform 0.5s 0.6s;
+
+}
+
+.list-text h3:hover{
+    transform: scale(1.1);
+}
+.list-card p{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    padding-top: 2.2em;
+    max-width: 34ch;
+    text-align: center;
+}
+
+.list-card{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* team-section */
+
+.team{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 6em 3em;
+    background-color: var(--black-5);
+ 
+   
+}
+.team__members{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: center;
+    gap:50px;
+    padding: 4em 2em;
+    max-width: 70%;
+    
+}
+
+.team-img{
+    object-fit: fill;
+    width: 100px;
+    border-radius: 100px;
+    border:1px solid var(--logo-color);
+}
+.team-info{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width:40%;
+    height: 40%;
+    margin:0 auto;
+}
+.member-name{
+    font-size: 2.074rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--black-75);
+}
+.member-exp{
+    font-size: 1.728rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black-75);
+    text-align: center;
+}
+
+/* stories-section */
+.stories{
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items:center;
+    padding: 5.8em 0em;
+    margin: 0 auto;
+ }
+ .stories__img{
+     object-fit: fill;
+     width:50%;
+ }
+ .stories__btn{
+    border-color:var(--black-75) ;
+    color:var(--black-75);
+    font-weight: 900;
+ }
+ .stories__description{
+     font-size: 1.2rem;
+     font-family: Arial, Helvetica, sans-serif;
+     color: var(--black);
+     max-width: 55ch;
+     line-height: 1.6;
+ 
+ }
+ .stories__wrap{
+     display: flex;
+     gap:20px;
+     justify-content: center;
+     align-items: center;
+     flex-flow: row wrap;
+     padding: 3.3em 1em;
+ }
+
+ 
+/* media querry */
+ @media (max-width:465px){
+   .hero{
+    height: 100vh;
+    gap: 16px;
+   }
+    .hero__header{
+    font-size: 2.5rem;
+    text-align: center;
+    }
+    
+    .hero__description, .stories__description{
+      font-size: 1rem;
+      text-align: center;
+    padding-left: 2em;
+padding-right: 2em;}
+
+.hero__btn, .stories__btn{
+   font-size:1rem ;
+    }
+
+    .list-text h3{
+        font-size: 1.5rem;
+    }
+    .list-card p{
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--black);
+        padding-top: 2.2em;
+        min-width: 45ch;
+        text-align: center;
+    }
+    .member-name{
+        font-size: 1.2rem;
+     
+    }
+    .member-exp{
+        font-size: 1.3rem;
+      
+    }
+    .team-info{
+        display: flex;
+        flex-flow: column nowrap; 
+    }
+    }
+
+ 
+    

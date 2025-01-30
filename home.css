@@ -1,0 +1,337 @@
+.container{
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* hero-section */
+.hero{
+    min-height:88vh;
+    width: 100%;
+    background-color: var(--bg-primary);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap:10px;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: 3em;
+}
+.hero__header{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary);
+}
+
+.hero__subtitle{
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    color: var(--primary);
+}
+.hero__paragraph{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: var(--black);
+    max-width: 55ch;
+    text-align: center;
+}
+
+.hero__btn{
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    padding:0.5em 1.2em;
+    text-align: center;
+    width:100px;
+    font-weight: 800;
+
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* mission-section */
+.mession{
+    background-color: var(--primary);
+    text-align: center;
+    padding-bottom: 7em;
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
+    margin-top: -88px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    }
+    .mession__header{
+        color:var(--bg-primary);
+        font-family: Verdana, Geneva, Tahoma, sans-serif ;
+        font-size: 3rem;
+        text-shadow: 0px 2px 3px rgb(167, 166, 166);
+        font-weight: bold;
+        padding-top: 1em;
+    }
+    
+    .mession__paragraph{
+    color:var(--bg-primary);
+    font-size: 1.2rem;
+    padding-top: 4em;
+    max-width: 80ch;
+    }
+/* services-section */
+
+.services{
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+.services__header,
+.problem__header,
+.resources__header,
+.contact__header{
+    color:var(--black-75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 2.5rem;
+    text-shadow: 0px 2px 3px rgb(167, 166, 166);
+    font-weight: bold;
+    margin-top: 64px;
+    text-align: center;
+}
+
+
+
+.services__list{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    gap:30px;
+    margin-top: 64px;
+}
+
+.services__list li{
+border-radius: 50px;
+background-color: var(--bg-primary);
+padding: 1em;
+font-size: 2.07rem;
+max-width: 17ch;
+font-family: Arial, Helvetica, sans-serif;
+color: var(--black-75);
+
+}
+/* problem-section */
+.problem{
+    padding-top: 28px;
+}
+.problem h2{
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.problem__wrap{
+    display: flex;
+    flex-flow: row wrap;
+  justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60vw;
+    gap: 32px;
+}
+
+.problem__statment{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    max-width: 65ch;
+}
+
+.problem__statment h3{
+    font-size: 2.074rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: var(--logo-color);
+}
+.problem__statment p{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black-75);
+}
+
+.problem__btn{
+    border: 2px solid var(--logo-color);
+    border-radius: 20px;
+    padding:0.5em 1.2em;
+    text-align: center;
+    width:100px;
+    font-weight: 800;
+    margin-top: 16px;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* form-styling */
+.donate{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:center;
+}
+
+.donate-now{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 9px;
+    margin-top:14px;
+    margin-bottom: 6px;
+    
+}
+
+.radio{
+   display: none;
+}
+
+.label{
+    padding: 0.2em 0.85em;
+    background-color: var(--black-5);
+    color: var(--black);
+    cursor: pointer;
+    font-size:2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
+}
+
+#time-1:checked ~ .label-1,
+#time-2:checked ~ .label-2{
+    background-color: var(--logo-color);
+    color: #fff;
+}
+
+.donate ul{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+    font-size: 0.4rem;
+    padding: 0.3em 0.2em;
+}
+.price{
+    font-size: 2rem;
+    padding: 0.3em 0.4em;
+    border: 1px solid var(--logo-color);
+}
+#amount-1:checked ~ .label-3,
+#amount-2:checked ~ .label-4,
+#amount-3:checked ~ .label-5,
+#amount-4:checked ~ .label-6{
+    background-color: var(--logo-color);
+    color:#fff;
+}
+
+.other{
+    border-bottom:1px solid var(--black-75) ;
+  margin-top: 3em;
+  width: 260px;
+  
+    
+}
+
+.other::placeholder{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--black);
+    text-align: right;
+
+}
+
+.form-btn{
+    width: 230px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 32px;
+    padding: 0.5em 1.3em;
+    border-color: var(--black-75);
+    color: var(--black-75);
+    transition: all 500ms;
+}
+
+.form-btn:visited, .form-btn:hover{
+    color: #FFF;
+    background: var(  --gradient);
+}
+
+/* media querry */
+@media (max-width:536px){
+    .hero{
+        height: 100vh;
+    }
+    .hero__header{
+        font-size: 2.5rem;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .hero__subtitle{
+        font-size: 2rem;
+    }
+    .hero__btn, .hero__paragraph,.mession__paragraph,
+    .problem__statment p,
+.problem__btn{
+        font-size: 1rem;
+      max-width: 55ch;
+    }
+    
+
+    .mession__header,.services__header,
+    .problem__header,
+    .resources__header,
+    .contact__header{
+        font-size: 2.05rem;
+    }
+    .services__list li{
+        font-size: 1.7rem;
+        }
+    .problem__statment h3{
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-align: left;     
+}
+.problem__statment p{
+    text-align: left;
+}
+
+.label{
+    padding: 0.2em 1em;
+    font-size:1.5rem;
+   
+}
+.donate{
+    align-items: center;
+    justify-content:center;
+}
+
+.price{
+    font-size: 1.5rem;
+    padding: 0.1em 0.5em;
+  
+  
+}
+.other{
+  margin-top: 2em;
+  width: 200px;
+  
+    
+}
+
+.other::placeholder{
+    font-size: 1.2rem;
+}
+
+.form-btn{
+    width: 180px;
+    font-size: 1rem;
+    margin-top: 16px;
+}
+span{
+    font-size: 0.8rem;
+}
+}

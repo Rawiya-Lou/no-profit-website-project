@@ -1,0 +1,85 @@
+
+/* contact-section */
+
+
+.contact__header{
+    font-size:2rem;
+    color:var(--black-75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: bold;
+    margin-top: 16px;
+    
+}
+
+.info-input{
+    outline: 1px solid var(--logo-color);
+    border-radius:8px ;
+    padding:4px 8px;
+    width: 80%;
+    margin-block: 1em;
+}
+.info-text{
+    outline: 1px solid var(--logo-color);
+    border-radius:8px ;
+    padding:4px 8px;
+    width: 96%; 
+}
+input::placeholder{
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.contact-btn{
+    background: var(--black-5);
+    color:var(--black-75);
+    width:50%;
+    max-width: 412px;
+    text-align: center;
+    border-radius:8px ;
+    padding:4px 8px;
+    border: 1px solid var(--black-75);
+    font-size: 1.3rem;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover{
+    background: var(--gradient);
+    color:#fff;
+    border-color: var(--logo-color);
+}
+.contact{
+    display: flex;
+    flex-flow: column nowrap;
+    gap:10px;
+    align-items: center;
+    justify-content:center;
+    padding: 2em;
+ 
+}
+
+label{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-right: 0.2em;
+    color:var(--black-75);
+}
+input[type=text], input[type=email], textarea{
+    font-size: 1.5rem;
+}
+
+@media (max-width:768px){
+    label{
+        font-size: 1.2rem;
+    }
+    input[type=text], input[type=email], textarea{
+        font-size: 1.2rem;
+    }
+
+::placeholder{
+    text-align: right;
+    font-size: 1.2rem;
+}
+}
