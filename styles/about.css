@@ -29,6 +29,7 @@
 .hero__btn{
     color: #fff;
     border-color:#fff;
+    cursor: pointer;
     }
     
 .hero__btn:hover{
