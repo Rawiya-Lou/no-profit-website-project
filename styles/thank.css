@@ -1,9 +1,5 @@
-body{
-    /* background-color: rgba(111, 89, 128, 0.3); */
-    min-height: 80vh;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
+
+
 /*overlay is to cover the content beneath it -the porpose of it is to display a model or a message */
 #overlay{
    display: none;
@@ -12,7 +8,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .background-img{
@@ -40,6 +36,7 @@ a{
     font-size: 1.2rem;
     color: var(--primary);
     font-weight: 100;
+    z-index: 1;
 }
 
 .content-container{
@@ -50,8 +47,8 @@ a{
 .cyrcle{
 height:150px;
 width:150px;
-background-color:rgba(71, 100, 68, 0.7);
-border:1px solid #476444;
+background-color: rgb(255, 255, 255);
+border:3px solid #476444;
 border-top-left-radius:75px;
 border-bottom-left-radius:75px;
 border-top-right-radius:75px;
@@ -67,7 +64,8 @@ z-index: 1;
     right:30px;
     top:-24px;
     clip-path: polygon(83% 66%, 85% 5%, 78% 63%, 50% 77%);
-    background-color: aliceblue;
+    
+    background-color:rgb(71, 100, 68);
     z-index: 1;
 }
 
@@ -95,11 +93,17 @@ z-index: 1;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     padding:0.4em;
     background-color: #fff;
     border:1px solid #ccc;
     z-index: 1000;
     border-radius: 15px ;
+    transition: transfrom 0.3s, top
+    0.3s;
 
+}
+
+.open-message{
+    transform: translate(-50%, -50%) scale(1);
 }

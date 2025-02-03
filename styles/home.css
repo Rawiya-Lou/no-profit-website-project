@@ -244,7 +244,7 @@ color: var(--black-75);
 
 }
 
-.form-btn{
+.form-btn, .js-radio{
     width: 230px;
     font-size: 1.2rem;
     text-align: center;
@@ -259,6 +259,11 @@ color: var(--black-75);
     color: #FFF;
     background: var(  --gradient);
 }
+.error-message{
+    display: block;
+}
+
+
 
 /* media querry */
 @media (max-width:536px){
