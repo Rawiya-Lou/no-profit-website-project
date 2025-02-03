@@ -325,6 +325,10 @@ color: var(--black-75);
 .other::placeholder{
     font-size: 1.2rem;
 }
+.error-message{
+    display: none;
+    color: red;
+}
 
 .form-btn{
     width: 180px;

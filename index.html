@@ -84,7 +84,7 @@
             </div>
             <div class="problem__form">
 
-                    <form action="#" method="post" class="donate">
+                    <form action="#" id="donation-form" method="post" class="donate">
                         <div class="donate-now">
                             <input type="radio"
                             name="time"
@@ -98,7 +98,6 @@
                             name="time"
                             id="time-2"
                             class="radio"
-                            checked
                             value="one-time">
                             <label for="time-2"
                             class="label label-2">One time</label>
@@ -109,7 +108,8 @@
                                 name="amount"
                                 id="amount-1"
                                 class="radio"
-                                value="10$">
+                                value="10$"
+                                required>
                                 <label for="amount-1"
                                 class="label label-3 price">10$</label>
                             </li>
@@ -139,7 +139,6 @@
                                 name="amount"
                                 id="amount-4"
                                 class="radio"
-                                checked
                                 value="250$">
                                 <label for="amount-4"
                                 class="label label-6 price">250$</label>
@@ -148,11 +147,17 @@
                         <div>
                         <input type="text"
                         placeholder="USD"
+                        id="custom-amount"
                         class="other"
                         name="other">
                     </div>
                     <div>
-                        <button type="submit"
+                    <span id="error-message" class="error-message">Please select an amount!</span>
+                    </div>
+                    <div>
+                        <button
+                        id="googlePayButton" 
+                        type="submit"
                         class="btn form-btn">donate with G pay</button>
                     
                     </div>
@@ -260,6 +265,7 @@
             <a class="foot-link" href="#">Terms and conditions</a></li>
     </ul>
 </footer>
-
+<script src="scripts/home.js"></script>
+<script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
 </body>
 </html>
