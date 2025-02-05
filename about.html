@@ -16,22 +16,21 @@
 <body>
     <!-- header -->
     <header class="header">
-    <div class="header__logo">
-        <a href="index.html"><img src="images/Logo.png" alt="logo" loading="lazy" class="logo"></a>
-    </div>
-    <nav class="header__nav">
-        <ul>
-          
-            <li><a href="About.html" class="nav-link">About Us</a></li>
-            <li><a href="Support.html" class="nav-link">Support Us</a></li>
-            <li><a href="Contact.html" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="header__cta">
-        <button type="button" class="donate-cta"><a href="/donate.html" target="_blank">Donate</a></button>
-        <button type="button" class="volunteer-cta"><a href="/volunteer.html" target="_blank">Volunteer</a></button>
-    </div>
-    <button type="button" class="menu"><i class="fa-solid fa-bars"></i></i></button>
+        <div class="header__logo" id="logo">
+            <a href="index.html"><img src="images/Logo.png" alt="logo" loading="lazy" class="logo"></a>
+        </div>
+        <nav class="header__nav">
+            <ul id="nav-links">
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="support.html" class="nav-link">Support Us</a></li>
+                <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header__cta cta-buttons">
+            <button type="button" class="donate-cta js-button"><a href="/donate.html" target="_blank">Donate</a></button>
+            <button type="button" class="volunteer-cta js-button"><a href="/volunteer.html" target="_blank">Volunteer</a></button>
+        </div>
+        <button type="button" class="menu-bar"><i class="fa-solid fa-bars"></i></i></button>
 </header>
 <main class="container">
     <!-- hero-section -->
@@ -256,6 +255,7 @@
             <a class="foot-link" href="#">Terms and conditions</a></li>
     </ul>
 </footer>
+<script type="module" src="scripts/menu-bar.js"></script>
 
 </body>
 </html>
