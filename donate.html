@@ -20,24 +20,21 @@
     <main class="container">
         <h1 class="title">Fill out the donation form </h1>
 
-    <form action="https://formspree.io/f/xanqbqpe" method="post" id="donation" class="donate form-wrap">
+    <form action="https://formspree.io/f/xdkadawa" method="post" id="my-form" class="donate form-wrap">
         
         <!-- nameField -->
         <div class="form-field">
             <label for="firstName" class="starlabel">First Name:</label>
-            <br>
             <input type="text" name="firstName" id="firstName" class="info-input" required>
         </div>
        <!-- lastField -->
         <div class="form-field">
             <label for="lastName" class="starlabel">last Name:</label>
-            <br>
             <input type="text" name="lastName" id="lastName" class="info-input" required>
         </div>
         <!-- emailField -->
         <div class="form-field">
             <label for="email" class="starlabel">Email Address:</label>
-            <br>
             <input type="email" name="email" id="email" class="info-input" required>
         </div>
         <!-- donation -->
@@ -66,21 +63,18 @@
         <input id="donationInput5" class="radio js-other-amount amount5" type="radio" name="donation" value="custom">
         <label for="donationInput5" class="label label5">Other Amount</label>
 
-        <input type="text" name="customAmount"  id="customAmount" class="custom-amount" placeholder="Enter your amount"> 
-        
-        <div id="resultMessage"></div>
+        <input type="number" name="customAmount"  id="customAmount" min="0" step="any" class="custom-amount" placeholder="Enter your amount"> 
+        <p id="resultMessage"></p>
     </div>
+    <!-- message-field -->
+
     <div class="form-field">
         <label for="info" class="starlabel">Payment information</label><br>
-        <textarea name="info" id="info" class="info-input" required></textarea>
+        <textarea name="infoMessage" id="info" class="info-input" required></textarea>
     </div>
+      <button type="submit" form="contact" class="btn contact-btn" id="submit">Donate</button>
+      <p id="confermationMessage"></p>
     </form>
-
-    <div class="submit-btn">
-        <button type="submit" form="contact" class="btn contact-btn" id="submit">Donate</button>
-        <p id="confermationMessage" style="display: none;">✔ Donation successeded!</p>
-    </div>
-    <div>
     </main>
     <ul class="copy-right">
         <li>&copy; 2024 Save the Bay, org. All rights reserved</li>
@@ -90,5 +84,6 @@
     </ul>
 </div>
 <script src="scripts/donation.js"></script>
+
 </body>
 </html>

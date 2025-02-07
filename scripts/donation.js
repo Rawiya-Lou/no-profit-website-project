@@ -1,72 +1,89 @@
-
+const donationForm = document.getElementById("my-form");
 const submitButton = document.getElementById('submit');
 const confMessage = document.getElementById('confermationMessage');
-const donationForm = document.getElementById('donation');
-
-donationForm.addEventListener('submit', (event) =>{
-    event.preventDefault();
-    const selectedAmount = document.querySelector('input[name="amount"]:checked').value;
-    const otherAmount = document.getElementById('other').value;
-    alert(`Thank you for your donation of ${otherAmount || selectedAmount}!`);
-
-    fetch(donationForm.action,{
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response =>{
-        if(response.ok){
-            donationForm.reset(); //reset the form fields
-            confMessage.style.display= 'block';
-            }
-    }).catch(error =>{
-        console.error('Error!', error.message);
-    });
- });
-
-
-const frecquency = document.querySelector('input[name="frequency"]:checked');
-const donation = document.querySelector('input[name="donation"]:checked');
-const customAmount = document.querySelector('input[name="customAmount"]');
-
+const inputElements = document.querySelectorAll('input:required');
 const otherAmount = document.querySelector('.js-other-amount');
-const resultMessage =document.getElementById('resultMessage');
+const resultMessage = document.getElementById('resultMessage');
+const customAmount = document.querySelector('input[name="customAmount"]:checked');
 
+donationForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
+    let allFilled = true;
+    inputElements.forEach(inputElement => {
+        if (!inputElement.value) {
+            allFilled = false;
+        }
+    });
 
-otherAmount.addEventListener('change', () => {
-    if (otherAmount.checked) {
-        donationForm.classList.add('editing-amount');
+    if (allFilled) {
+        const frequency = document.querySelector('input[name="frequency"]:checked');
+        const donation = document.querySelector('input[name="donation"]:checked');
+        let message = 'You have selected ';
 
+        if (frequency && donation) {
+            message += `${frequency.value} donation and the amount of $${donation.value}`;
+        } else {
+            message += 'please select a frequency and an amount!';
+        }
+        
+        resultMessage.innerHTML = message;
+        confMessage.style.display = 'block';
     } else {
-        donationForm.classList.remove('editing-amount'); // Optional: Remove the class if not checked
+        resultMessage.innerHTML = 'Please fill all required fields!';
+        alert('Please fill in all fields!');
     }
- });
-
- customAmount.addEventListener('input', () => {
-    const value = customAmount.value;
-    // Check if the value is a number
-    if (isNaN(value) || value.trim() === '') {
-        customAmount.setCustomValidity('Please enter a valid number');
-    } else {
-        customAmount.setCustomValidity(''); 
-        resultMessage.style.display = 'block';
-    }
+    
+    customChecked();
 });
 
-
-let message = 'You have selected';
-if(frecquency){
-    message += frecquency.value + 'donation';
+customChecked();
+function customChecked() {
+    otherAmount.addEventListener('change', () => {
+        if (otherAmount.checked) {
+            donationForm.classList.add('editing-amount');
+        } else {
+            donationForm.classList.remove('editing-amount');
+        }
+    });
 }
-if(donation){
-    message += `of $ ${donation.value}`;
-}else if (customAmount){
-    message += `of $ ${customAmount.value}`;
-}
 
-resultMessage.innerText = message;
+
+
+
+
+donationForm.addEventListener('submit', handleSubmiting);
+
+
+    async function handleSubmiting(event){
+        event.preventDefault();
+        const status = document.getElementById('confermationMessage');
+        const formData = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if(response.ok){
+                status.innerHTML = 'thanks for your submission';
+                form.reset();
+            }else{
+                response.json().then(data => {
+                    if(Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data['errors'].map(error => error['message']).join(', ')
+                    }else{
+                        status.innerHTML = 'Oops! there was a problem submitting your form';
+                    }
+                });
+            }
+        }).catch((error) =>{
+            status.innerHTML = 'Oops! there was a problem submitting your form';
+        });
+    }
+  
+
 
 
 
