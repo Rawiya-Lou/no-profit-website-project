@@ -1,5 +1,4 @@
 
-
 /*overlay is to cover the content beneath it -the porpose of it is to display a model or a message */
 #overlay{
    display: none;
@@ -42,7 +41,9 @@ a{
 .content-container{
     display: flex;
     flex-flow: nowrap column;
-    align-items: center;   
+    align-items: center; 
+    min-width: 400px;  
+    width: 100%;
 }
 .cyrcle{
 height:150px;
@@ -73,7 +74,7 @@ z-index: 1;
     padding: 0.5em 1em;
     width: 100px;
     border-radius: 50px;
-   
+   text-align: center;
     background-color: #e2e2e2;
     color: var(--logo-color);
     font-weight: bold;

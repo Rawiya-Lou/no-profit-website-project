@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/donate.css">
+    <link rel="stylesheet" href="styles/thank.css">
     <link rel="icon" type="image/x-icon" href="images/Logo.png">
 </head>
 <body>
@@ -21,7 +22,7 @@
         <h1 class="title">Fill out the donation form </h1>
 
     <form action="https://formspree.io/f/xdkadawa" method="post" id="my-form" class="donate form-wrap">
-        
+        <div class="input-info-wrap">
         <!-- nameField -->
         <div class="form-field">
             <label for="firstName" class="starlabel">First Name:</label>
@@ -72,9 +73,10 @@
         <label for="info" class="starlabel">Payment information</label><br>
         <textarea name="infoMessage" id="info" class="info-input" required></textarea>
     </div>
-      <button type="submit" form="contact" class="btn contact-btn" id="submit">Donate</button>
-      <p id="confermationMessage"></p>
-    </form>
+    </div>
+    <button type="submit" form="contact" class="btn contact-btn submit-btn" id="subButton">Donate</button>
+    <p id="confermationMessage"></p>
+</form>
     </main>
     <ul class="copy-right">
         <li>&copy; 2024 Save the Bay, org. All rights reserved</li>
@@ -83,6 +85,26 @@
             <a class="foot-link" href="#">Terms and conditions</a></li>
     </ul>
 </div>
+  <div class="thank-you-container">
+    <div id="overlay"></div>
+
+    <div id="thankYouMessage">
+        <div class="content-container">
+            <div class="cyrcle">
+                <div class="symbol"></div>
+            </div>
+        <img src="images/Logo-2.png" alt="logo-image" class="background-img"
+        loading="lazy">
+    
+
+        <h1 id="thankYouTitle">Thank you! you are awsome</h1>
+        <a href="index.html" target="_blank" id="thankYouLink"><p>Go back to home page</p></a>
+        <button id="closeButton" class="btn-close">Close</button>
+    </div>
+    </div>
+</div>
+
+     <script src="scripts/thanku.js"></script>
 <script src="scripts/donation.js"></script>
 
 </body>

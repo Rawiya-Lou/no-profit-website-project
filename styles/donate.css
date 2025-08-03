@@ -9,26 +9,37 @@
     color: var(--logo-color);
     font-weight: bold;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 .form-wrap{
    display: flex;
    flex-flow: column nowrap;
    justify-content: center;
    margin: 64px auto 64px auto;
-   max-width: 60%;
-
+   max-width: 50%;
+   width: 100%;
 }
+
 .form-field{
    width: 100%;
    padding: 8px 0 8px 0;
+
+}
+
+.input-info-wrap{
+    margin: 0 auto;
+    width: 100%;
 }
 .form-field-donate{
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    
 
 }
 .info-input{
+   
     font-size: 1.8rem;
     color: var(--black-75);
 }
@@ -82,7 +93,7 @@
 #customAmount{
     border-bottom: 1px solid ;
     padding: 0.4em 0;
-    width: 290px;
+    width: 210px;
     margin: 10px 0;
     font-size: 1.2rem;
 }
@@ -106,11 +117,12 @@
 
 
 .submit-btn{
-    max-width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4em;
+    width: 100%; 
+   text-align: center;
+   margin: 0 auto;
+   margin-bottom: 4em;
+   max-width: 50%;
+
 }
 
 .starlabel:after{
@@ -121,6 +133,7 @@ color: rgb(203, 1, 1);
     background-color: #fff;
 }
 /* checkbox-styling */
+
 input[type="checkbox"]{
     appearance: none;
     -webkit-appearance:none;
@@ -132,6 +145,7 @@ input[type="checkbox"]{
     padding:0.2rem;
     border:0.25rem solid var(--logo-color);
     border-radius: 0.5rem;
+    cursor: pointer;
 
 }
 input[type="checkbox"]::before{
@@ -151,6 +165,8 @@ input[type="checkbox"]:checked:before{
    margin: 1.2rem;
    gap: 0.4rem;
 }
+
+
 @media (max-width:780px){
     .form-wrap *{
         font-size: 1.5rem;

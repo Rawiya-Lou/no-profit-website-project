@@ -51,37 +51,6 @@ function customChecked() {
 
 
 
-
-donationForm.addEventListener('submit', handleSubmiting);
-
-
-    async function handleSubmiting(event){
-        event.preventDefault();
-        const status = document.getElementById('confermationMessage');
-        const formData = new FormData(event.target);
-        fetch(event.target.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if(response.ok){
-                status.innerHTML = 'thanks for your submission';
-                form.reset();
-            }else{
-                response.json().then(data => {
-                    if(Object.hasOwn(data, 'errors')) {
-                        status.innerHTML = data['errors'].map(error => error['message']).join(', ')
-                    }else{
-                        status.innerHTML = 'Oops! there was a problem submitting your form';
-                    }
-                });
-            }
-        }).catch((error) =>{
-            status.innerHTML = 'Oops! there was a problem submitting your form';
-        });
-    }
   
 
 
