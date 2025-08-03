@@ -37,7 +37,7 @@ This project is a website for the non-profit organization "Save the Bay." The we
 3.  Open `index.html` in your browser to view the home page.
 
 ## Screenshots
-`![home page](images\non-profit-home-page.PNG)`
+![home page](images\non-profit-home-page.PNG)
 
 ## Contact
 
